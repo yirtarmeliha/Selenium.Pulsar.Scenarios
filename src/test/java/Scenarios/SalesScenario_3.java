@@ -15,7 +15,7 @@ public class SalesScenario_3 extends OpenPage {
 
     @DisplayName("Scenario 3")
     @Test
-    void ScenarioTwo() {
+    void ScenarioThree() {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {

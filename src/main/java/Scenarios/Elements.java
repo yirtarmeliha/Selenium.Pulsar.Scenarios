@@ -3,14 +3,16 @@ package Scenarios;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.JavascriptExecutor;
 
 public class Elements {
 
     public static WebDriver driver;
+    JavascriptExecutor js ;
 
     public Elements(WebDriver webDriver){
         driver = webDriver;
+        js = (JavascriptExecutor) driver;
     }
 
     public static WebElement singOnOff(){
@@ -233,6 +235,7 @@ public class Elements {
     public static WebElement baskettabletd(){
         return driver.findElement(new By.ByCssSelector(".col-xs-2.basket-table-td-right.ng-binding"));
     }
+
 
 
 
