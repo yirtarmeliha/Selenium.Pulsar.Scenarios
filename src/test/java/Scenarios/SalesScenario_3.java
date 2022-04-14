@@ -16,6 +16,7 @@ public class SalesScenario_3 extends OpenPage {
     @DisplayName("Scenario 3")
     @Test
     void ScenarioThree() {
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -46,7 +47,6 @@ public class SalesScenario_3 extends OpenPage {
         assertEquals("£30.00", Elements.basketSubtotalTD().getAttribute("innerHTML"));
 
         Elements.cancelScreen().click();
-
         assertEquals("block", Elements.cancellYesNo().getCssValue("display"));
 
         try {
@@ -65,15 +65,11 @@ public class SalesScenario_3 extends OpenPage {
 
         assertEquals("none", Elements.cancellYesNo().getCssValue("display"));
 
-
         Elements.twoScreen().click();
         Elements.zeroScreen().click();
         Elements.xScreen().click();
-
         Elements.grocery().click();
-
         assertEquals("block", Elements.modal().getCssValue("display"));
-
         Elements.fivePopUp().click();
         Elements.onePopUp().click();
 
@@ -84,11 +80,8 @@ public class SalesScenario_3 extends OpenPage {
         }
 
         assertEquals("51", Elements.keypadModalClass().getAttribute("value"));
-
         Elements.backPopUp().click();
-
         assertEquals("5", Elements.keypadModalClass().getAttribute("value"));
-
         Elements.fivePopUp().click();
         Elements.fivePopUp().click();
 
@@ -100,7 +93,6 @@ public class SalesScenario_3 extends OpenPage {
 
         assertEquals("555", Elements.keypadModalClass().getAttribute("value"));
         Elements.enterPopUp().click();
-
         assertEquals("none", Elements.modal().getCssValue("display"));
 
 
@@ -111,14 +103,10 @@ public class SalesScenario_3 extends OpenPage {
         }
 
         Elements.cigaretteOrTobacco().click();
-
         assertEquals("block", Elements.ConfirmAgePopUp().getCssValue("display"));
         Elements.cigaretteOrTobaccoYes().click();
         assertEquals("none", Elements.ConfirmAgePopUp().getCssValue("display"));
-
-
         assertEquals("block", Elements.modal().getCssValue("display"));
-
         Elements.fourPopUp().click();
         Elements.doubleZeroPopUp().click();
 
@@ -147,7 +135,6 @@ public class SalesScenario_3 extends OpenPage {
         }
 
         assertEquals("400", Elements.keypadModalClass().getAttribute("value"));
-
         Elements.enterPopUp().click();
         assertEquals("none", Elements.modal().getCssValue("display"));
 
@@ -155,7 +142,6 @@ public class SalesScenario_3 extends OpenPage {
 
         Elements.cigaretteOrTobacco().click();
         assertEquals("block", Elements.modal().getCssValue("display"));
-
         Elements.twoPopUp().click();
         Elements.fourPopUp().click();
 
@@ -179,7 +165,6 @@ public class SalesScenario_3 extends OpenPage {
 
         Elements.grocery().click();
         assertEquals("block", Elements.modal().getCssValue("display"));
-
         Elements.threePopUp().click();
         Elements.ninePopUp().click();
         Elements.zeroPopUp().click();
@@ -191,7 +176,6 @@ public class SalesScenario_3 extends OpenPage {
         }
 
         assertEquals("390", Elements.keypadModalClass().getAttribute("value"));
-
         Elements.enterPopUp().click();
         assertEquals("none", Elements.modal().getCssValue("display"));
 
@@ -203,7 +187,6 @@ public class SalesScenario_3 extends OpenPage {
 
         Elements.fiveScreen().click();
         Elements.xScreen().click();
-
         Elements.grocery().click();
         assertEquals("block", Elements.modal().getCssValue("display"));
 
@@ -259,7 +242,6 @@ public class SalesScenario_3 extends OpenPage {
         assertEquals("35", Elements.basketItemCountTD().getAttribute("innerHTML"));
         assertEquals("£148.10", Elements.basketSubtotalTD().getAttribute("innerHTML"));
 
-
         Elements.cardScreen().click();
         assertEquals("block", Elements.StartcardtransactionYesNo().getCssValue("display"));
 
@@ -293,16 +275,11 @@ public class SalesScenario_3 extends OpenPage {
             e.printStackTrace();
         }
 
-
-
         Elements.cigaretteOrTobacco().click();
-
         assertEquals("block", Elements.ConfirmAgePopUp().getCssValue("display"));
         Elements.cigaretteOrTobaccoYes().click();
         assertEquals("none", Elements.ConfirmAgePopUp().getCssValue("display"));
-
         assertEquals("block", Elements.modal().getCssValue("display"));
-
         Elements.fourPopUp().click();
         Elements.doubleZeroPopUp().click();
         assertEquals("400", Elements.keypadModalClass().getAttribute("value"));
@@ -330,17 +307,13 @@ public class SalesScenario_3 extends OpenPage {
             e.printStackTrace();
         }
 
-
         Elements.grocery().click();
         assertEquals("block", Elements.modal().getCssValue("display"));
-
         Elements.twoPopUp().click();
         Elements.doubleZeroPopUp().click();
         assertEquals("200", Elements.keypadModalClass().getAttribute("value"));
-
         Elements.enterPopUp().click();
         driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
-
         assertEquals("none", Elements.modal().getCssValue("display"));
 
         try {

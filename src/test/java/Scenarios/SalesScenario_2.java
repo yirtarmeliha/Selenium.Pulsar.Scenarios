@@ -15,6 +15,7 @@ public class SalesScenario_2 extends OpenPage {
     @DisplayName("Scenario 2")
     @Test
     void ScenarioTwo() {
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -24,9 +25,7 @@ public class SalesScenario_2 extends OpenPage {
         Elements.eightScreen().click();
         Elements.xScreen().click();
         Elements.grocery().click();
-
         assertEquals("block", Elements.modal().getCssValue("display"));
-
         Elements.sevenPopUp().click();
         Elements.backPopUp().click();
 
@@ -37,7 +36,6 @@ public class SalesScenario_2 extends OpenPage {
         }
 
         assertEquals("", Elements.keypadModalClass().getAttribute("value"));
-
         Elements.threePopUp().click();
         Elements.doubleZeroPopUp().click();
         assertEquals("300", Elements.keypadModalClass().getAttribute("value"));
@@ -61,15 +59,11 @@ public class SalesScenario_2 extends OpenPage {
 
         Elements.fourScreen().click();
         Elements.xScreen().click();
-
         Elements.cigaretteOrTobacco().click();
         assertEquals("block", Elements.ConfirmAgePopUp().getCssValue("display"));
-
         Elements.cigaretteOrTobaccoYes().click();
         assertEquals("none", Elements.ConfirmAgePopUp().getCssValue("display"));
-
         assertEquals("block", Elements.modal().getCssValue("display"));
-
         Elements.ninePopUp().click();
         Elements.doubleZeroPopUp().click();
         assertEquals("900", Elements.keypadModalClass().getAttribute("value"));

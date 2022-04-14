@@ -19,6 +19,7 @@ public class Elements {
         return driver.findElement(new By.ByCssSelector(".col-xs-6[translate='SIGNIN_LB']"));
     }
 
+
     //SAYILAR Pop Up
     public static WebElement zeroPopUp(){
         return driver.findElement(new By.ByCssSelector(".flexItem[data-ng-click=\"playKeySound(); addCodeValue('0');\"]"));
@@ -66,6 +67,7 @@ public class Elements {
     }
 
 
+
     public static WebElement grocery () {
         return driver.findElement(new By.ByCssSelector(".btn[style='padding: 0px; font-size: 2.5vmin; background: rgb(144, 165, 228);']"));
     }
@@ -82,12 +84,40 @@ public class Elements {
         return driver.findElement(By.id("ageRestricted"));
     }
 
-    public static WebElement pointFruitMenu () {
-        return driver.findElement(new By.ByCssSelector(".btn[style=\"padding: 0px; font-size: 2.5vmin; background: rgb(248, 248, 13);\"]"));
+
+
+    public static WebElement functions(){
+        return driver.findElement(new By.ByCssSelector(".col-xs-6[data-translate=\"FUNCTIONS_LB\"]"));
     }
-    public static WebElement pointVegMenu () {
-        return driver.findElement(new By.ByCssSelector(".btn[style='padding: 0px; font-size: 2.5vmin; background: rgb(0, 255, 0);']"));
+    public static WebElement discountPercent(){
+        return driver.findElement(new By.ByCssSelector(".col-xs-6[data-translate=\"DISCOUNT_PERCENT_LB\"]"));
     }
+    public static WebElement cancelDiscount(){
+        return driver.findElement(new By.ByCssSelector(".col-xs-6[data-translate=\"DISCOUNT_CANCELL_LB\"]"));
+    }
+    public static WebElement discountAmount(){
+        return driver.findElement(new By.ByCssSelector(".col-xs-6[translate=\"DISCOUNT_AMOUNT_LB\"]"));
+    }
+    public static WebElement voidLine(){
+        return driver.findElement(new By.ByCssSelector(".col-xs-6[data-translate=\"LINE_VOID_LB\"]"));
+    }
+
+
+
+
+    public static WebElement homeMode (){
+        return driver.findElement(new By.ByCssSelector(".col-xs-6[data-translate=\"HOME_MODE_LB\"]"));
+    }
+
+    public static WebElement management(){
+        return driver.findElement(new By.ByCssSelector(".mgnButton[data-ng-click=\"playKeySound(); gotoState('management')\"]"));
+    }
+    public static WebElement product(){
+        return driver.findElement(new By.ByCssSelector(".mgnButton[data-ng-click=\"playKeySound(); gotoState('management.product')\"]"));
+    }
+
+
+
 
     //Screen
 
@@ -119,7 +149,7 @@ public class Elements {
         return driver.findElement(new By.ByCssSelector(".flexItem[data-ng-click=\"playKeySound(); addCode('6');\"]"));
     }
     public static WebElement sevenScreen (){
-        return driver.findElement(new By.ByCssSelector(".flexItem[data-ng-click=\"playKeySound(); addCode('7');\"]"));
+        return driver.findElement(new By.ByCssSelector(".flexItem[data-ng-click=\"playKeySound(); addCode('7');;\"]"));
     }
     public static WebElement eightScreen (){
         return driver.findElement(new By.ByCssSelector(".flexItem[data-ng-click=\"playKeySound(); addCode('8');\"]"));
@@ -180,6 +210,10 @@ public class Elements {
     public static WebElement productScreenFour(){
         return driver.findElement( new By.ByCssSelector(".ng-isolate-scope tbody tr:nth-child(4)"));
     }
+    public static WebElement productScreenFive(){
+        return driver.findElement( new By.ByCssSelector(".ng-isolate-scope tbody tr:nth-child(5)"));
+    }
+
 
 
 
@@ -232,8 +266,14 @@ public class Elements {
 
 
 
+
     public static WebElement baskettabletd(){
         return driver.findElement(new By.ByCssSelector(".col-xs-2.basket-table-td-right.ng-binding"));
+    }
+
+
+    public static WebElement pointVegAndFruitMenuOK(){
+        return  driver.findElement(new By.ByCssSelector(".btn[data-ng-click=\"playKeySound(); gotoPage( - 1)\"]"));
     }
 
 

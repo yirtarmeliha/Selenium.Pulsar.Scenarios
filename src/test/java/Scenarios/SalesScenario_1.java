@@ -13,28 +13,25 @@ public class SalesScenario_1 extends OpenPage{
 
     @DisplayName("Scenario 1")
     @Test
-    void Scenario(){
+    void ScenarioOne(){
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         Elements.grocery().click();
-
         assertEquals("block", Elements.modal().getCssValue("display"));
-
         Elements.fivePopUp().click();
         Elements.zeroPopUp().click();
         assertEquals("50", Elements.keypadModalClass().getAttribute("value"));
-
         Elements.enterPopUp().click();
         driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
-
-
         assertEquals("none", Elements.modal().getCssValue("display"));
-        assertEquals("£0.00", Elements.basketDiscountTD().getAttribute("innerHTML"),"yanlış");
-        assertEquals("£0.50", Elements.basketSubtotalTD().getAttribute("innerHTML"),"yanlış");
 
+        assertEquals("£0.00", Elements.basketDiscountTD().getAttribute("innerHTML"));
+        assertEquals("£0.50", Elements.basketSubtotalTD().getAttribute("innerHTML"));
 
         try {
             Thread.sleep(200);
@@ -44,8 +41,6 @@ public class SalesScenario_1 extends OpenPage{
 
         Elements.cigaretteOrTobacco().click();
         assertEquals("block", Elements.ConfirmAgePopUp().getCssValue("display"));
-
-
         Elements.cigaretteOrTobaccoNo().click();
         assertEquals("none", Elements.ConfirmAgePopUp().getCssValue("display"));
 
@@ -57,16 +52,12 @@ public class SalesScenario_1 extends OpenPage{
 
         Elements.cigaretteOrTobacco().click();
         assertEquals("block", Elements.ConfirmAgePopUp().getCssValue("display"));
-
         Elements.cigaretteOrTobaccoYes().click();
         assertEquals("none", Elements.ConfirmAgePopUp().getCssValue("display"));
-
-
         assertEquals("block", Elements.modal().getCssValue("display"));
-
         Elements.sixPopUp().click();
         Elements.doubleZeroPopUp().click();
-        assertEquals("600", Elements.keypadModalClass().getAttribute("value"),"d");
+        assertEquals("600", Elements.keypadModalClass().getAttribute("value"));
 
         try {
             Thread.sleep(200);
@@ -75,7 +66,7 @@ public class SalesScenario_1 extends OpenPage{
         }
 
         Elements.enterPopUp().click();
-        assertEquals("none", Elements.modal().getCssValue("display"),"d");
+        assertEquals("none", Elements.modal().getCssValue("display"));
 
         try {
             Thread.sleep(2000);
@@ -91,20 +82,15 @@ public class SalesScenario_1 extends OpenPage{
             e.printStackTrace();
         }
 
-
-        assertEquals("£12.50", Elements.basketSubtotalTD().getAttribute("innerHTML"),"yanlış");
+        assertEquals("£12.50", Elements.basketSubtotalTD().getAttribute("innerHTML"));
 
         Elements.grocery().click();
-
-        assertEquals("block", Elements.modal().getCssValue("display"),"d");
-
+        assertEquals("block", Elements.modal().getCssValue("display"));
         Elements.eightPopUp().click();
         Elements.doubleZeroPopUp().click();
-        assertEquals("800", Elements.keypadModalClass().getAttribute("value"),"d");
-
+        assertEquals("800", Elements.keypadModalClass().getAttribute("value"));
         Elements.enterPopUp().click();
-
-        assertEquals("none", Elements.modal().getCssValue("display"),"d");
+        assertEquals("none", Elements.modal().getCssValue("display"));
 
         try {
             Thread.sleep(2000);
@@ -112,16 +98,17 @@ public class SalesScenario_1 extends OpenPage{
             e.printStackTrace();
         }
 
-        assertEquals("4", Elements.basketItemCountTD().getAttribute("innerHTML"),"YALIŞ");
-        assertEquals("£20.50", Elements.basketSubtotalTD().getAttribute("innerHTML"),"yanlış");
-
+        assertEquals("4", Elements.basketItemCountTD().getAttribute("innerHTML"));
+        assertEquals("£20.50", Elements.basketSubtotalTD().getAttribute("innerHTML"));
 
         Elements.cash50Screen().click();
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         Elements.Cscreen().click();
 
 
