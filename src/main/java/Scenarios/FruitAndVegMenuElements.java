@@ -179,6 +179,20 @@ public class FruitAndVegMenuElements {
         }
     }
 
+    public static void pointVegMenuCAPSLONGRED() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+        js.executeScript("$(\"span:contains('CAPS LONG RED')\").parent().click()\n");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
 
 
 //.FruitMenu
@@ -203,6 +217,20 @@ public class FruitAndVegMenuElements {
             ex.printStackTrace();
         }
         js.executeScript("$(\"span:contains('AVOCADO')\").parent().click()\n");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public static void pointFruitMenuBanana1kg() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+        js.executeScript("$(\"span:contains('BANANA 1kg')\").parent().click()\n");
         try {
             Thread.sleep(1000);
         } catch (InterruptedException ex) {

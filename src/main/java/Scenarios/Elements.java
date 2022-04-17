@@ -101,6 +101,9 @@ public class Elements {
     public static WebElement voidLine(){
         return driver.findElement(new By.ByCssSelector(".col-xs-6[data-translate=\"LINE_VOID_LB\"]"));
     }
+    public static WebElement enterCode(){
+        return driver.findElement(new By.ByCssSelector(".col-xs-6[translate=\"ENTER_CODE_LB\"]"));
+    }
 
 
 
