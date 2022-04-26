@@ -108,8 +108,12 @@ public class Elements {
 
 
 
+
     public static WebElement homeMode (){
         return driver.findElement(new By.ByCssSelector(".col-xs-6[data-translate=\"HOME_MODE_LB\"]"));
+    }
+    public static WebElement homeModeBack(){
+        return driver.findElement(new By.ByCssSelector(".btn[data-ng-click=\"playKeySound(); gotoHome()\"]"));
     }
 
     public static WebElement management(){
@@ -118,6 +122,66 @@ public class Elements {
     public static WebElement product(){
         return driver.findElement(new By.ByCssSelector(".mgnButton[data-ng-click=\"playKeySound(); gotoState('management.product')\"]"));
     }
+    public static WebElement mixAndMatch(){
+        return driver.findElement(new By.ByCssSelector(".mgnButton[data-ng-click=\"playKeySound(); gotoState('management.mixmatch')\"]"));
+    }
+    public static WebElement create(){
+        return driver.findElement(new By.ByCssSelector(".btn[data-ng-click=\"playKeySound(); createNew()\"]"));
+    }
+    public static WebElement MixandMacthcurrentRecordName(){
+        return driver.findElement(new By.ByCssSelector(".form-control[data-ng-model=\"currentRecord.name\"]"));
+    }
+    public static WebElement MixandMatchquantity(){
+        return driver.findElement(new By.ByCssSelector(".form-control[data-ng-model=\"currentPredicate.amount\"]"));
+    }
+    public static WebElement MixandMacthcurrentRewardAmount(){
+        return driver.findElement(new By.ByCssSelector(".form-control[data-ng-model=\"currentReward.amount\"]"));
+    }
+    public static WebElement MixandMacthBarcode(){
+        return driver.findElement(new By.ByCssSelector(".form-control[data-ng-model=\"mmctrl.barcode\"]"));
+    }
+
+    public static WebElement MixandMacthSubmenuProduct(){
+        return driver.findElement(new By.ByCssSelector(".form-control[data-ng-model=\"mmctrl.name\"]"));
+    }
+
+    public static WebElement MixandMacthSubmenuProductENTER(){
+        return driver.findElement(new By.ByCssSelector(".ng-scope[data-ng-mouseenter=\"setActive($index)\"]"));
+    }
+
+    public static WebElement SAVEmm(){
+        return driver.findElement(new By.ByCssSelector(".btn[data-ng-disabled=\"mmForm.$invalid || errorMessage || bsTableControlProductWithCampaign.options.data.length == 0\"]"));
+    }
+    public static WebElement DELETEmm(){
+        return driver.findElement(new By.ByCssSelector(".btn[data-ng-if=\"currentRecord.id != null\"]"));
+    }
+    public static WebElement deleteAreYouSure(){
+        return driver.findElement(By.id("yesNoDialog"));
+    }
+    public static WebElement deleteAreYouSureYES(){
+        return driver.findElement(new By.ByCssSelector(".flexItem[data-ng-click=\"playKeySound(); confirmed();\"]"));
+    }
+    public static WebElement deleteAreYouSureNO(){
+        return driver.findElement(new By.ByCssSelector(".flexItem[data-ng-click=\"notConfirmedLog();\"]"));
+    }
+
+
+
+    public static WebElement MixandMacthfirst(){
+        return driver.findElement(new By.ByCssSelector(".data[data-index=\"0\"]"));
+    }
+
+
+
+    public static WebElement suspend(){
+        return driver.findElement(new By.ByCssSelector(".col-xs-6[data-translate=\"SUSPEND_LB\"]"));
+    }
+    public static WebElement resume(){
+        return driver.findElement(new By.ByCssSelector(".col-xs-6[data-translate=\"RESUME_LB\"]"));
+    }
+
+
+
 
 
 
@@ -228,6 +292,8 @@ public class Elements {
     }
 
 
+
+
     public static WebElement StartcardtransactionYesNo(){
         return driver.findElement(By.id("pinpadSelected"));
     }
@@ -265,7 +331,11 @@ public class Elements {
         return driver.findElement(new By.ByCssSelector(".basket-table-td-right[style=\"font-size: 6vmin;\"]"));
     }
 
+    public static WebElement thirdItemInBasket(){
+        return driver.findElement(new By.ByCssSelector(".row[data-ng-if=\"basket.lastAddedBasketDetail != null\"] td.col-xs-8"));
+    }
 
+//   .row[data-ng-class="(basket.status == 'CANCELLED') ? 'basketCancelled' : ((selectedManualDiscountDetailIndex == $index) ? 'selected' : 'discountBasket')"] td.col-xs-8
 
 
 
